@@ -16,7 +16,7 @@ namespace PhoneNumber.Controllers
         }
 
         [HttpGet]
-        public IActionResult GetCountryInfo(string phoneNumber)
+        public async Task <ActionResult> GetCountryInfo(string phoneNumber)
         {
             var result = phoneInfoService.GetCountryInfo(phoneNumber);
 
